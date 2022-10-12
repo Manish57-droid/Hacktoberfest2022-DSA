@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-size: 100%;
+                font-family: 'Lato', sans-serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                min-height: 100vh;
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+                color: white;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem;
+            }
+
+            .navbar-logo {
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            .navbar-links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none;
+            }
+
+            .navbar-links > li {
+                margin: 0 15px;
+            }
+
+            .navbar-links > li > a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .navbar-links > li > a:hover {
+                color: gray;
+            }
+
+            .hero {
+                flex: 1;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .hero-heading {
+                font-size: 3rem;
+                font-weight: bold;
+                text-align: center;
+                margin: 0.6rem 0 2rem 0;
+            }
+
+            .hero-sub-heading {
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .hero-links {
+                padding: 2rem;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hero-onboard {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .hero-onboard > form {
+              background: transparent;
+              padding: 2rem;
+              display: flex;
+              flex-direction: column;
+
+              border-radius: 12px;
+            }
+
+            .hero-onboard > form > input {
+              padding: 0.3rem 0.5rem;
+              border-radius: 8px;
+              margin: 1rem 0;
+            }
+
+            .hero-onboard > form > button {
+                border: 1px solid #e3e3e3;
+                padding: 1rem 3rem;
+                border-radius: 8px;
+                margin: 1rem 0;
+                text-center;
+                text-decoration: none;
+                background: white;
+                color: black;
+                font-weight: bold;
+            }
+
+            .hero-onboard > a {
+                border: 1px solid #e3e3e3;
+                padding: 1rem 3rem;
+                border-radius: 8px;
+                margin: 1rem 0;
+                text-center;
+                text-decoration: none;
+                background: white;
+                color: black;
+                font-weight: bold;
+            }
+
+            .logout-btn {
+                background: transparent;
+                border: 0;
+                font-size: 1.1rem;
+                color: white;
+            }
+
+            .logout-btn:hover {
+                color: gray;
+            }
+      </style>
+  <title>Login</title>
+</head>
+<body>
+<nav class="navbar">
+  <h1 class="navbar-logo">Fibonacci</h1>
+  <!--            <div>-->
+  <!--                <ul class="navbar-links">-->
+  <!--                    <li><a href="#">login</a></li>-->
+  <!--                    <li><a href="#">logout</a></li>-->
+  <!--                    <li><a href="#">register</a></li>-->
+  <!--                </ul>-->
+  <!--            </div>-->
+</nav>
+
+<main class="hero">
+  <h1 class="hero-heading">Fibonacci Sequence</h1>
+  <div class="hero-links white-glassmorphism">
+    <h3 class="hero-sub-heading">Login to Fibonacci Sequence</h3>
+    <div class="hero-onboard">
+      <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Enter Email here">
+        <input type="password" name="password" placeholder="Enter Password here">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
