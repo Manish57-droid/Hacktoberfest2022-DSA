@@ -1,23 +1,33 @@
 #include <iostream>
 using namespace std;
+   
+int main(){
+    int input[100], count, i, num;
+       
+    cout << "Enter Number of Elements in Array\n";
+    cin >> count;
+     
+    cout << "Enter " << count << " numbers \n";
+      
+    // Read array elements
+    for(i = 0; i < count; i++){
+        cin >> input[i];
+    }
+      
+    cout << "Enter a number to search in Array\n";
+    cin >> num;
+      
+    // search num in inputArray from index 0 to elementCount-1 
+    for(i = 0; i < count; i++){
+        if(input[i] == num){
+            cout << "Element found at index " << i;
+            break;
+        }
+    }
+      
+    if(i == count){
+        cout  << "Element Not Present in Input Array\n";
+    }
  
-int search(int arr[], int N, int x) {
-    int i;
-    for (i = 0; i < N; i++)
-        if (arr[i] == x)
-            return i;
-    return -1;
-}
-
-int main(void) {
-    int arr[] = { 2, 3, 4, 10, 40 };
-    int x = 10;
-    int N = sizeof(arr) / sizeof(arr[0]);
-
-    int result = search(arr, N, x);
-    if(result == -1)
-        cout << "Element is not present in array";
-    else
-        cout << "Element is present at index " << result;
     return 0;
 }
