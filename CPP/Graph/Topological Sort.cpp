@@ -68,7 +68,7 @@ void Graph::topologicalSort()
 			topologicalSortUtil(i, visited, Stack);
 
 	
-	while (Stack.empty() == false) {
+	while (Stack.empty() == 0) {
 		cout << Stack.top() << " ";
 		Stack.pop();
 	}
